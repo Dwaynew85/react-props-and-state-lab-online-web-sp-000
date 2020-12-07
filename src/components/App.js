@@ -33,6 +33,7 @@ class App extends React.Component {
         type: value }
       }
     });
+  }
 
   render() {
     return (
