@@ -15,6 +15,17 @@ class App extends React.Component {
     }
   }
 
+  fetchPets = () => {
+    let endpoint = 'a/api/pets';
+    if (this.state.filters.type !== 'all') {
+      endpoint += `?type=${this.state.filters.type}`;
+    }
+
+    fetch(endpoint)
+    .then(res => res.json())
+    .then(pets => this.setState({ pets: pets}));
+  };
+
   render() {
     return (
       <div className="ui container">
