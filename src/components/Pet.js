@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 class Pet extends React.Component {
   render() {
@@ -22,15 +22,15 @@ class Pet extends React.Component {
             <button className="ui disabled button">Already adopted</button>
           ) : (
             <button
-            onClick={() this.props.onAdoptPet(this.props.pet.id)}
-            className="ui primary button">
-            Adopt pet
+              onClick={() => this.props.onAdoptPet(this.props.pet.id)}
+              className="ui primary button">
+              Adopt pet
             </button>
           )}
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default Pet
+export default Pet;
